@@ -1,78 +1,58 @@
-# React + TypeScript + Vite
+# 🪓 Juego del Ahorcado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido al proyecto del **Juego del Ahorcado**! Una aplicación web interactiva desarrollada con **React**, **TypeScript** y **Vite**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías Utilizadas
 
-## React Compiler
+- ⚡️ **[Vite](https://vitejs.dev/)** - Entorno de desarrollo rápido.
+- ⚛️ **[React](https://react.dev/)** - Librería para la interfaz de usuario.
+- 🔷 **[TypeScript](https://www.typescriptlang.org/)** - Tipado estático para JavaScript.
+- 🛠️ **[ESLint](https://eslint.org/)** - Linter para mantener la calidad del código.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+## 🛠️ Instalación y Configuración Local
 
-## Expanding the ESLint configuration
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Pre-requisitos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Asegúrate de tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior recomendada).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pasos
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/DanLest/tu-repositorio.git
+   cd tu-repositorio
+   ```
 
-```
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+3. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. **Abrir en el navegador:**
+   Abre la dirección que te proporcione la terminal (por lo general `http://localhost:5173/`).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
 
-```
+## 🎮 Cómo Jugar
+
+1. El sistema seleccionará una palabra aleatoria al azar.
+2. Adivina las letras seleccionando o escribiendo en el teclado.
+3. Por cada letra incorrecta, se dibujará una parte de la figura del ahorcado.
+4. ¡Ganas si completas la palabra antes de agotar tus intentos!
+
+---
+
+## 📝 Licencia
+
+Este proyecto es de uso libre para fines educativos y personales.
